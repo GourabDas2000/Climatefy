@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climat.efy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="blur-div" style="background: url(images/cover-small.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;">
+            <img src="images/cover.jpg" class="img1" loading="lazy">
+        </div>
+    </div>
+    <div class="myweather">
+        <div class="present">
+            <div class="first-present">
+                <h1>Get all the weather infromation of your current location just a click</h1>
+                <button class="button show">Try It</button>
+            </div>
+            <div class="last-present">
+                <p>Also <a class="help" href="#Service">Click Here</a> check your Desire state , country's weather </p>
+                <i class="fa-solid fa-arrow-right-long fa-xs"></i>
+            </div>
+        </div>
+        <div class="waitingPage">
+            <p>Please wait patiently , we are connecting to the server .....</p>
+        </div>
+        <div class=" beforedetails details">
+
+            
+            <div class="first-details">
+                <div class="wrrap-main">
+                    <div class="main custom-background">Rain</div>
+                    <i class="custom-background"></i>
+                </div>
+                <div class="description custom-background">moderate rain</div>
+            </div>
+
+
+
+            <div class="all-details">
+                <div class="parent-details custom-background">
+                    <h1 class="temp">298°C</h1>
+                    <div class="icon-details">
+                        <p>Temparature</p>
+                        <i class="fa-solid fa-temperature-half fa-xs"></i>
+                    </div>
+                </div>
+                <div class="parent-details custom-background">
+                    <h1 class="feels_like">298°C</h1>
+                    <div class="icon-details">
+                        <p>FeelsLike</p>
+                        <i class="fa-solid fa-temperature-half fa-xs"></i>
+                    </div>
+                </div>
+                <div class="parent-details custom-background">
+                    <h1 class="temp_min">297°C</h1>
+                    <div class="icon-details">
+                        <p>Min Temp</p>
+                        <i class="fa-solid fa-temperature-half fa-xs"></i>
+                    </div>
+                </div>
+                <div class="parent-details custom-background">
+                    <h1 class="temp_max">300°C</h1>
+                    <div class="icon-details">
+                        <p>Max Temp</p>
+                        <i class="fa-solid fa-temperature-half fa-xs"></i>
+                    </div>
+                </div>
+                <div class="parent-details custom-background">
+                    <h1 class="pressure">1015hPa</h1>
+                    <div class="icon-details">
+                        <p>Pressure</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="22px" width ='22px' viewBox="0 0 48 53" fill="none">
+                            <path d="M0 21.9584C0 18.9886 0.622527 16.1388 1.90034 13.409C3.17816 10.6792 4.88191 8.36938 7.04437 6.41952C9.20683 4.46967 11.7625 2.90978 14.7113 1.73987C17.6601 0.569957 20.7727 0 24.0164 0C27.2601 0 30.3727 0.569957 33.3543 1.73987C36.3031 2.90978 38.8587 4.46967 40.9884 6.41952C43.1181 8.36938 44.8218 10.7092 46.0997 13.409C47.3775 16.1088 48 18.9586 48 21.9584C48 26.818 46.4273 31.1377 43.2819 34.9774C40.1365 38.7871 36.0737 41.3969 31.1263 42.8068V52.6761H17.2341V42.9268C12.1884 41.5769 8.0273 38.9671 4.81638 35.0974C1.60546 31.2277 0 26.848 0 21.9584ZM5.27509 21.9584C5.27509 26.608 7.1099 30.5977 10.8123 33.9275C14.4491 37.2872 18.8396 38.9671 23.9836 38.9671C27.3584 38.9671 30.5038 38.2171 33.3543 36.6873C36.2375 35.1574 38.4983 33.0875 40.202 30.4777C41.873 27.8679 42.7249 25.0181 42.7249 21.9284C42.7249 19.6185 42.2334 17.4287 41.2505 15.2989C40.2676 13.169 38.9242 11.3692 37.2532 9.83926C35.5823 8.30938 33.5836 7.07947 31.2573 6.17954C28.9311 5.27961 26.5393 4.82964 24.0164 4.82964C21.4935 4.82964 19.1017 5.27961 16.7754 6.17954C14.4491 7.07947 12.4833 8.30938 10.8123 9.83926C9.1413 11.3692 7.79795 13.199 6.81502 15.2989C5.76655 17.4587 5.27509 19.6485 5.27509 21.9584ZM7.17543 23.0383V20.8784H14.2853V23.0383H7.17543ZM10.7468 12.4191L12.4505 10.8592L17.4307 15.4189L15.727 17.0087L10.7468 12.4191ZM19.0362 27.208C19.0362 25.9481 19.5276 24.8681 20.4778 23.9382C21.428 23.0083 22.6075 22.5283 23.9509 22.4983L32.8956 9.02933L35.058 10.0792L28.4396 24.5682C29.0294 25.3181 29.2915 26.188 29.2915 27.208C29.2915 28.5279 28.8 29.6378 27.7843 30.5377C26.7686 31.4377 25.5563 31.8876 24.1147 31.8876C22.7058 31.8876 21.4935 31.4377 20.5106 30.5377C19.5276 29.6378 19.0362 28.5279 19.0362 27.208ZM23.3283 13.199V6.7195H25.5891V13.229H23.3283V13.199ZM32.9611 23.0083V20.7884H40.071V23.0083H32.9611Z" fill="black"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="parent-details custom-background">
+                    <h1 class="humidity">64%</h1>
+                    <div class="icon-details">
+                        <p>Humidity</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="22px" width ='22px'  viewBox="0 0 43 61" fill="none">
+                            <path d="M0 36.8563C0 34.0913 0.696356 30.9178 2.08907 27.3359C3.48178 23.7539 5.2807 20.2662 7.48583 16.9357C12.0121 10.463 15.9582 5.56143 19.2659 2.26228L21.442 0C22.1673 0.816934 22.9798 1.57103 23.8502 2.26228C25.0398 3.58194 26.8677 5.74996 29.305 8.82917C31.7422 11.9084 33.8603 14.642 35.6012 17.1556C37.6613 20.3291 39.4312 23.7539 40.8529 27.3673C42.2746 30.9806 43 34.1541 43 36.8877C43 40.0298 42.4487 43.0147 41.3171 45.874C40.1856 48.7332 38.6768 51.2155 36.7618 53.2892C34.8468 55.363 32.5547 57.0283 29.8853 58.2537C27.2159 59.4791 24.4015 60.1075 21.442 60.1075C18.5405 60.1075 15.7841 59.5105 13.1437 58.3165C10.5034 57.1225 8.2112 55.5201 6.29622 53.4463C4.38124 51.404 2.84345 48.9218 1.71187 46.0625C0.580296 43.2032 0 40.124 0 36.8563ZM6.55735 27.6501C6.55735 30.258 7.05061 32.3317 8.06613 33.9028C9.08165 35.4424 10.6194 36.2279 12.6795 36.2279C14.7686 36.2279 16.3063 35.4424 17.3509 33.9028C18.3664 32.3631 18.8887 30.2894 18.9177 27.6501C18.8887 25.0107 18.3664 22.937 17.3509 21.366C16.3354 19.8264 14.7686 19.0408 12.6795 19.0408C10.6194 19.0408 9.08165 19.8264 8.06613 21.366C7.05061 22.937 6.55735 25.0107 6.55735 27.6501ZM11.1127 27.6501C11.1127 27.1788 11.1127 26.8017 11.1127 26.5504C11.1127 26.299 11.1417 25.9534 11.1707 25.5135C11.1997 25.0736 11.2287 24.728 11.3158 24.508C11.4028 24.2881 11.4609 24.0053 11.5769 23.7539C11.693 23.5026 11.8381 23.2826 12.0121 23.1884C12.2152 23.0627 12.4184 22.9998 12.6795 22.9998C13.0857 22.9998 13.4049 23.1255 13.637 23.3769C13.8691 23.6282 14.0432 24.0367 14.1302 24.5709C14.2173 25.1364 14.2753 25.5763 14.3043 25.9848C14.3333 26.3932 14.3333 26.9274 14.3333 27.6186C14.3333 28.3413 14.3333 28.8755 14.3043 29.2525C14.2753 29.6296 14.2173 30.1009 14.1302 30.6664C14.0432 31.2006 13.8691 31.6091 13.637 31.8604C13.4049 32.1118 13.0857 32.2375 12.6795 32.2375C12.4184 32.2375 12.2152 32.1746 12.0121 32.0489C11.809 31.9233 11.664 31.7347 11.5769 31.4834C11.4609 31.232 11.3738 30.9492 11.3158 30.7293C11.2578 30.4779 11.1997 30.1323 11.1707 29.7238C11.1417 29.2839 11.1127 28.9383 11.1127 28.7184C11.1127 28.4984 11.1127 28.1214 11.1127 27.6501ZM12.8246 52.001H16.6545L31.1329 18.2553H27.2159L12.8246 52.001ZM25.3009 42.6062C25.33 45.2456 25.8812 47.3193 26.8968 48.8904C27.9123 50.43 29.4791 51.2155 31.5391 51.2155C33.6282 51.2155 35.166 50.43 36.1815 48.8904C37.197 47.3507 37.6903 45.2456 37.7193 42.6062C37.6903 39.9669 37.197 37.8932 36.1815 36.3536C35.166 34.814 33.6282 34.0284 31.5391 34.0284C29.4791 34.0284 27.9123 34.814 26.8968 36.3536C25.8522 37.8932 25.33 39.9669 25.3009 42.6062ZM29.8563 42.6062C29.8563 41.8836 29.8563 41.3494 29.8853 40.9724C29.9143 40.5953 29.9723 40.124 30.0594 39.5584C30.1464 38.9929 30.3205 38.6158 30.5526 38.3645C30.7848 38.1131 31.1039 37.9874 31.5101 37.9874C31.7713 37.9874 32.0034 38.0503 32.2065 38.176C32.4096 38.3016 32.5547 38.4902 32.6707 38.7729C32.7868 39.0557 32.8738 39.3071 32.9609 39.527C33.0479 39.747 33.0769 40.0926 33.1059 40.5325L33.135 41.5379V42.6062V43.706L33.1059 44.7114L32.9609 45.7169L32.6707 46.471L32.2065 47.068L31.5101 47.2565C31.1039 47.2565 30.7848 47.1308 30.5526 46.8794C30.3205 46.6281 30.1464 46.2196 30.0594 45.6855C29.9723 45.1199 29.9143 44.6486 29.8853 44.2715C29.8563 43.8945 29.8563 43.3289 29.8563 42.6062Z" fill="black"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="parent-details custom-background">
+                    <h1 class="name">1015hPa</h1>
+                    <div class="icon-details">
+                        <p>Name</p>
+                        <i class="fa-solid fa-water fa-xs"></i>
+                    </div>
+                </div>
+                <div class="parent-details custom-background">
+                    <h1 class="snow">933hPa</h1>
+                    <div class="icon-details">
+                        <p>Snow</p>
+                        <i class="fa-solid fa-arrow-up-from-ground-water fa-xs"></i>
+                    </div>
+                </div>
+                <div class="parent-details custom-background">
+                    <h1 class="visibility">10000Km</h1>
+                    <div class="icon-details">
+                        <p>Visibility</p>
+                        <i class="fa-solid fa-arrow-up-from-ground-water fa-xs"></i>
+                    </div>
+                </div>
+                <div class="parent-details custom-background">
+                    <h1 class="cloud">100%</h1>
+                    <div class="icon-details">
+                        <p>Cloud</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="22px" width ='22px'  viewBox="0 0 54 50" fill="none">
+                            <path d="M0.305138 34.7233C0.305138 31.3858 1.05459 28.3855 2.5535 25.7897C4.05242 23.194 5.96232 21.5084 8.30739 20.7667C8.93596 16.8225 10.3623 13.5525 12.6107 11.0578C14.8591 8.52947 17.4459 7.28214 20.3954 7.28214C23.2481 7.28214 25.8108 8.49576 28.035 10.9567C30.2834 13.4176 31.7339 16.5528 32.3867 20.3959H33.0394C35.8922 20.3959 38.3098 21.7781 40.3164 24.5761C42.323 27.3742 43.3384 30.7453 43.3384 34.6896C43.3384 38.6675 42.323 42.0387 40.3164 44.8367C38.3098 47.6348 35.8922 49.0507 33.0394 49.0507H10.6283C9.22607 49.0507 7.8964 48.6798 6.63925 47.9045C5.38209 47.1291 4.24582 46.1852 3.32714 44.9041C2.40845 43.6231 1.68317 42.0724 1.12712 40.3194C0.571073 38.5664 0.305138 36.6448 0.305138 34.7233ZM3.81066 34.7233C3.81066 37.2853 4.48758 39.5103 5.79309 41.3307C7.09859 43.1511 8.71838 44.0951 10.6041 44.0951H33.0394C34.901 44.0951 36.5208 43.1849 37.8504 41.3307C39.1801 39.4766 39.8571 37.2853 39.8571 34.7233C39.8571 32.1612 39.2043 29.9363 37.8504 28.1158C36.5208 26.2954 34.9251 25.3515 33.0394 25.3515H29.679C29.4372 25.3515 29.3163 25.1829 29.3163 24.8458L29.1471 23.194C28.9053 20.0251 27.9383 17.3619 26.2701 15.2718C24.602 13.1816 22.6196 12.1366 20.347 12.1366C18.0745 12.1366 16.0921 13.1817 14.3997 15.3055C12.7074 17.3956 11.7646 20.0588 11.547 23.194L11.3777 24.6098C11.3777 24.947 11.2569 25.1155 10.9909 25.1155L9.903 25.3515C8.16233 25.5538 6.71177 26.5651 5.52715 28.3518C4.41506 30.1385 3.81066 32.2623 3.81066 34.7233ZM25.2064 5.32688C24.9646 5.63028 25.013 5.86626 25.3756 6.03482C26.4152 6.67534 27.2855 7.28215 27.9866 7.88895C28.2526 7.99009 28.446 7.95637 28.5185 7.78782C29.9932 5.86626 31.6856 4.88863 33.6438 4.88863C35.6021 4.88863 37.2702 5.79884 38.7208 7.61926C40.1472 9.43968 40.945 11.6983 41.1142 14.3616L41.3318 16.5191H44.7648C46.3362 16.5191 47.6901 17.2944 48.8263 18.8789C49.9626 20.4633 50.5187 22.3175 50.5187 24.475C50.5187 26.4977 50.011 28.2507 49.0198 29.7677C48.0285 31.2847 46.7956 32.1275 45.3208 32.3635C45.0791 32.3635 44.9582 32.532 44.9582 32.9029V36.7123C44.9582 37.0831 45.0791 37.2516 45.3208 37.2516C47.7626 37.0494 49.8176 35.7009 51.4857 33.24C53.1538 30.779 54 27.8461 54 24.475C54 20.9016 53.1055 17.8675 51.2923 15.3729C49.4791 12.8445 47.3033 11.5972 44.7648 11.5972H44.4021C43.7736 8.22606 42.4439 5.46173 40.4131 3.27048C38.4065 1.07924 36.1339 0.000468242 33.6438 0.000468242C30.2592 -0.0332432 27.4306 1.75346 25.2064 5.32688Z" fill="black"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="parent-details custom-background">
+                    <h1 class="rain">3.16mm</h1>
+                    <div class="icon-details">
+                        <p>Rain</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="22px" width ='22px' viewBox="0 0 60 56" fill="none">
+                            <path d="M0 26.3386C0 23.1402 1.04197 20.3033 3.1259 17.8001C5.20984 15.297 7.8437 13.7117 11.0275 12.9885C11.9247 9.206 13.9797 6.09098 17.1346 3.64346C20.2894 1.19595 23.9074 0 27.9884 0C31.9826 0 35.5137 1.19595 38.6397 3.56002C41.7656 5.9241 43.7916 8.9835 44.7178 12.7104H45.644C48.22 12.7104 50.6223 13.3223 52.822 14.5182C55.0217 15.7142 56.7873 17.3829 58.0608 19.4689C59.3343 21.5548 60 23.8633 60 26.3386C60 28.7861 59.3922 31.039 58.1766 33.1249C56.9609 35.2109 55.2822 36.8796 53.1693 38.1312C51.0564 39.3828 48.741 40.0503 46.2229 40.1059C45.8466 40.1059 45.644 39.939 45.644 39.6331V35.934C45.644 35.6002 45.8466 35.4334 46.2229 35.4334C48.6831 35.3221 50.7959 34.3765 52.5326 32.5965C54.2692 30.8165 55.1375 28.7305 55.1375 26.3108C55.1375 23.8911 54.1823 21.8051 52.301 20.0251C50.4197 18.2451 48.191 17.3551 45.615 17.3551H40.9551C40.6078 17.3551 40.4342 17.1882 40.4342 16.8823L40.2026 15.2692C39.8842 12.2654 38.5239 9.73444 36.1794 7.73193C33.8061 5.7016 31.0854 4.70034 27.9305 4.70034C24.7757 4.70034 21.9971 5.7016 19.6816 7.73193C17.3372 9.76225 16.0347 12.2654 15.7453 15.2692L15.5427 16.7432C15.5427 17.077 15.3401 17.2717 14.9638 17.2717L13.4298 17.3551C11.0275 17.6332 9.00145 18.6345 7.35166 20.3311C5.70188 22.0276 4.89146 24.0302 4.89146 26.3386C4.89146 28.7583 5.75977 30.8443 7.49638 32.6243C9.233 34.4043 11.3459 35.3499 13.8061 35.4612C14.1245 35.4612 14.2981 35.628 14.2981 35.9618V39.6609C14.2981 39.9668 14.1245 40.1337 13.8061 40.1337C9.92764 39.9668 6.65702 38.5484 3.96527 35.8784C1.27352 33.2083 0 30.0377 0 26.3386ZM15.4848 44.9453C15.4848 44.834 15.5137 44.6394 15.6006 44.389L20.3184 28.3411C20.492 27.8127 20.8104 27.3955 21.2446 27.1174C21.6787 26.8392 22.1418 26.7002 22.576 26.7002C22.7786 26.7002 23.0101 26.728 23.2706 26.7836C23.9653 26.8949 24.4862 27.2564 24.8336 27.8127C25.1809 28.3689 25.2677 28.9808 25.0651 29.6761L20.3473 45.6128C20 46.8087 19.1896 47.3928 17.974 47.3928C17.8582 47.3928 17.7713 47.365 17.6556 47.3372C17.4819 47.2816 17.3951 47.2537 17.3661 47.2537C16.7294 47.0869 16.2663 46.7809 15.9479 46.3359C15.6295 45.8631 15.4848 45.4181 15.4848 44.9453ZM23.068 52.7607L30.1302 28.3689C30.246 27.8405 30.5355 27.4233 30.9986 27.1452C31.4617 26.8671 31.9247 26.728 32.4168 26.728C32.6773 26.728 32.9378 26.7558 33.1983 26.8114C33.835 26.9783 34.2981 27.3399 34.6165 27.8961C34.9349 28.4524 34.9928 29.0364 34.8191 29.6761L27.7858 54.0957C27.67 54.5685 27.4095 54.9579 26.9465 55.2916C26.4834 55.6254 26.0203 55.7922 25.4703 55.7922C25.2098 55.7922 24.9493 55.7366 24.7467 55.6532C24.1679 55.5141 23.6758 55.1525 23.2417 54.5685C22.9233 54.0679 22.8654 53.4838 23.068 52.7607ZM35.0217 45.0009C35.0217 44.8897 35.0507 44.695 35.1375 44.3612L39.8553 28.3133C40.0289 27.7849 40.3184 27.3677 40.7236 27.0896C41.1577 26.8114 41.5919 26.6724 42.055 26.6724C42.2865 26.6724 42.547 26.7002 42.8075 26.7558C43.4153 26.9227 43.8495 27.2008 44.1389 27.618C44.4284 28.0352 44.5731 28.4802 44.5731 28.9252C44.5731 29.0086 44.5441 29.1477 44.5152 29.3146C44.4863 29.4814 44.4573 29.5927 44.4573 29.6483L39.7395 45.585C39.6237 46.1134 39.3632 46.5584 38.9291 46.8644C38.4949 47.1703 38.0029 47.3372 37.453 47.3372L36.7583 47.1981C36.1794 47.0312 35.7453 46.7531 35.4269 46.3081C35.1664 45.8909 35.0217 45.4459 35.0217 45.0009Z" fill="black"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wind-details">
+                <div class="basic-wind">
+
+
+                    <div class="parent-details custom-background">
+                        <h1 class="speed">0.62meter/sec</h1>
+                        <div class="icon-details">
+                            <p>WindSpeed</p>
+                            <i class="fa-solid fa-gauge fa-xs"></i>
+                        </div>
+                    </div>
+                    <div class="parent-details custom-background">
+                        <h1 class="deg">349°</h1>
+                        <div class="icon-details">
+                            <p>Direction</p>
+                            <i class="fa-solid fa-compass fa-xs"></i>
+                        </div>
+                    </div>
+                    <div class="parent-details custom-background">
+                        <h1 class="quality">1.18meter/sec</h1>
+                        <div class="icon-details">
+                            <p>AirQuality</p>
+                            <i class="fa-solid fa-wind fa-xs"></i>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="forclear">
+                <button class="button clear">Clear</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- =================================================== Service ===================================== -->
+
+    <div class="custom_weather" id="Service">
+        <h1>Service</h1>
+        <div class="different_condition">
+            <div class="cityname  activebar ">cityname</div>
+            <div class="countrycode ">countrycode</div>
+            <div class="latlon">Latitude/Longitude</div>
+        </div>
+    </div>
+    <div class="service_details">
+   
+        
+        <div class="left_details">
+            <div class="searchbox">
+                <i class="fa-solid fa-magnifying-glass fa-xs"></i>
+                <input type="text" value="" placeholder="cityname" class="input" id="input">
+                <i class="fa-solid fa-xmark fa-xs icondel"></i>
+            </div>
+            <div class="service_icon">
+                
+            </div>
+            <div class="service_temp">
+                <h1></h1>
+                <p>°C</p>
+            </div>
+            <div class="date_time">
+                <h1> ,</h1>
+                <p>00:00</p>
+            </div>
+            <div class="service_condition">
+                <div class="service_condition_icon">
+
+                </div>
+                <p class="condition_text">****</p>                
+            </div>
+            <div class="service_uv">
+                <i class="fa-solid fa-underline fa-xs"></i>
+                Uv - <span></span>
+            </div>
+            <div class="service_pressure">
+                <i class="fa-solid fa-droplet fa-xs"></i>
+                Pressure - <span>%</span>
+                
+            </div>
+            <div class="service_gust">
+                <i class="fa-solid fa-bars-staggered fa-xs"></i>
+                Gust -
+                <span>Km/h</span>
+                
+            </div>
+            <div class="service_chance">
+                <div class="chance_of_rain">
+                    <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                    Rain - 
+                    <span >%</span>
+                </div>
+
+                <div class="chance_of_snow">
+                    <i class="fa-regular fa-snowflake fa-xs"></i>
+                    Snow - 
+                    <span >%</span>
+                </div>
+            </div>
+            <div class="weather_image">
+                <div class="Forweather_img">
+                    
+                </div>                   
+            </div>
+        </div>
+
+
+        <div class="right_details">
+            <i class="fa-solid fa-bars fa-xs menu "></i>
+            <div class="right_top">
+                <div class="right_top_left">
+                    <div class="today active">Today</div>
+                    <div class="week">5 days</div>
+                </div>
+                <div class="right_top_right">
+                    <div class="unit">°C</div>
+                    <div class="Day"><i class="fa-solid fa-moon fa-xs"></i></div>
+                </div>
+            </div>
+
+            <div class="right_bottom">
+                <div class="fortoday">
+                    <div class="hourly_update">
+                            <div class="forday deactivetime ">
+
+
+                                <div class="hourcards">
+                                <div class="hourcard_updetails">
+                                    <span class="cardtime">6 AM</span>
+                                    <span class="temp">°C</span>
+                                </div>
+                                <div class="card_icon">
+                
+                                </div>
+                                <div class="card_condition">
+                                    
+                                </div>
+                                <div class="card_first_line">
+                                    <div class="card_wind_details">
+                                        <i class="fa-solid fa-wind fa-xs"></i>
+                                        <span class="card_wind">Km/h</span>
+                                    </div>
+                                    <div class="card_humidity_details">
+                                        <i class="fa-solid fa-droplet fa-xs"></i>
+                                        <span class="card_humidity"> %</span>
+                                    </div>                       
+                                </div>
+                                <div class="card_feelsLike">
+                                    feels_like : <span>°C</span>
+                                </div>
+                                <div class="card_rain_snow">
+                                    <div class="card_rain_details">
+                                        <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                                        <span class="card_rain">%</span>
+                                    </div>
+                                    <div class="card_snow_details">
+                                        <i class="fa-regular fa-snowflake fa-xs"></i>
+                                        <span class="card_snow">%</span>
+                                    </div>
+                                </div>
+                                    <div class="card_wind_details">
+                                    AQI - 
+                                    <span class="card_wind2">--</span>
+                                    </div>
+                                </div>
+
+                                <div class="hourcards">
+                                    <div class="hourcard_updetails">
+                                        <span class="cardtime">9 AM</span>
+                                        <span class="temp">°C</span>
+                                    </div>
+                                    <div class="card_icon">
+                    
+                                    </div>
+                                    <div class="card_condition">
+                                        
+                                    </div>
+                                    <div class="card_first_line">
+                                        <div class="card_wind_details">
+                                            <i class="fa-solid fa-wind fa-xs"></i>
+                                            <span class="card_wind">Km/h</span>
+                                        </div>
+                                        <div class="card_humidity_details">
+                                            <i class="fa-solid fa-droplet fa-xs"></i>
+                                            <span class="card_humidity"> %</span>
+                                        </div>                       
+                                    </div>
+                                    <div class="card_feelsLike">
+                                        feels_like : <span>°C</span>
+                                    </div>
+                                    <div class="card_rain_snow">
+                                        <div class="card_rain_details">
+                                            <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                                            <span class="card_rain">%</span>
+                                        </div>
+                                        <div class="card_snow_details">
+                                            <i class="fa-regular fa-snowflake fa-xs"></i>
+                                            <span class="card_snow">%</span>
+                                        </div>
+                                    </div>
+                                        <div class="card_wind_details">
+                                        AQI - 
+                                        <span class="card_wind2">--</span>
+                                        </div>
+                                </div>
+
+                                <div class="hourcards">
+                                    <div class="hourcard_updetails">
+                                        <span class="cardtime">11 AM</span>
+                                        <span class="temp">°C</span>
+                                    </div>
+                                    <div class="card_icon">
+                    
+                                    </div>
+                                    <div class="card_condition">
+                                        
+                                    </div>
+                                    <div class="card_first_line">
+                                        <div class="card_wind_details">
+                                            <i class="fa-solid fa-wind fa-xs"></i>
+                                            <span class="card_wind">Km/h</span>
+                                        </div>
+                                        <div class="card_humidity_details">
+                                            <i class="fa-solid fa-droplet fa-xs"></i>
+                                            <span class="card_humidity"> %</span>
+                                        </div>                       
+                                    </div>
+                                    <div class="card_feelsLike">
+                                        feels_like : <span>°C</span>
+                                    </div>
+                                    <div class="card_rain_snow">
+                                        <div class="card_rain_details">
+                                            <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                                            <span class="card_rain">%</span>
+                                        </div>
+                                        <div class="card_snow_details">
+                                            <i class="fa-regular fa-snowflake fa-xs"></i>
+                                            <span class="card_snow">%</span>
+                                        </div>
+                                    </div>
+                                        <div class="card_wind_details">
+                                        AQI - 
+                                        <span class="card_wind2">--</span>
+                                        </div>
+                                </div>
+
+
+                                <div class="hourcards">
+                                    <div class="hourcard_updetails">
+                                        <span class="cardtime">1 PM
+                                        </span>
+                                        <span class="temp">°C</span>
+                                    </div>
+                                    <div class="card_icon">
+                    
+                                    </div>
+                                    <div class="card_condition">
+                                        
+                                    </div>
+                                    <div class="card_first_line">
+                                        <div class="card_wind_details">
+                                            <i class="fa-solid fa-wind fa-xs"></i>
+                                            <span class="card_wind">Km/h</span>
+                                        </div>
+                                        <div class="card_humidity_details">
+                                            <i class="fa-solid fa-droplet fa-xs"></i>
+                                            <span class="card_humidity"> %</span>
+                                        </div>                       
+                                    </div>
+                                    <div class="card_feelsLike">
+                                        feels_like : <span>°C</span>
+                                    </div>
+                                    <div class="card_rain_snow">
+                                        <div class="card_rain_details">
+                                            <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                                            <span class="card_rain">%</span>
+                                        </div>
+                                        <div class="card_snow_details">
+                                            <i class="fa-regular fa-snowflake fa-xs"></i>
+                                            <span class="card_snow">%</span>
+                                        </div>
+                                    </div>
+                                        <div class="card_wind_details">
+                                        AQI - 
+                                        <span class="card_wind2">--</span>
+                                        </div>
+                                </div>
+
+
+                                <div class="hourcards">
+                                    <div class="hourcard_updetails">
+                                        <span class="cardtime">3 PM</span>
+                                        <span class="temp">°C</span>
+                                    </div>
+                                    <div class="card_icon">
+                    
+                                    </div>
+                                    <div class="card_condition">
+                                        
+                                    </div>
+                                    <div class="card_first_line">
+                                        <div class="card_wind_details">
+                                            <i class="fa-solid fa-wind fa-xs"></i>
+                                            <span class="card_wind">Km/h</span>
+                                        </div>
+                                        <div class="card_humidity_details">
+                                            <i class="fa-solid fa-droplet fa-xs"></i>
+                                            <span class="card_humidity"> %</span>
+                                        </div>                       
+                                    </div>
+                                    <div class="card_feelsLike">
+                                        feels_like : <span>°C</span>
+                                    </div>
+                                    <div class="card_rain_snow">
+                                        <div class="card_rain_details">
+                                            <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                                            <span class="card_rain">%</span>
+                                        </div>
+                                        <div class="card_snow_details">
+                                            <i class="fa-regular fa-snowflake fa-xs"></i>
+                                            <span class="card_snow">%</span>
+                                        </div>
+                                    </div>
+                                        <div class="card_wind_details">
+                                        AQI - 
+                                        <span class="card_wind2">--</span>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="fornight">
+
+                                <div class="hourcards">
+                                    <div class="hourcard_updetails">
+                                        <span class="cardtime">7 PM</span>
+                                        <span class="temp">°C</span>
+                                    </div>
+                                    <div class="card_icon">
+                    
+                                    </div>
+                                    <div class="card_condition">
+                                        
+                                    </div>
+                                    <div class="card_first_line">
+                                        <div class="card_wind_details">
+                                            <i class="fa-solid fa-wind fa-xs"></i>
+                                            <span class="card_wind">Km/h</span>
+                                        </div>
+                                        <div class="card_humidity_details">
+                                            <i class="fa-solid fa-droplet fa-xs"></i>
+                                            <span class="card_humidity"> %</span>
+                                        </div>                       
+                                    </div>
+                                    <div class="card_feelsLike">
+                                        feels_like : <span>°C</span>
+                                    </div>
+                                    <div class="card_rain_snow">
+                                        <div class="card_rain_details">
+                                            <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                                            <span class="card_rain">%</span>
+                                        </div>
+                                        <div class="card_snow_details">
+                                            <i class="fa-regular fa-snowflake fa-xs"></i>
+                                            <span class="card_snow">%</span>
+                                        </div>
+                                    </div>
+                                        <div class="card_wind_details">
+                                        AQI - 
+                                        <span class="card_wind2"> -- </span>
+                                        </div>
+                                </div>
+
+                                <div class="hourcards">
+                                    <div class="hourcard_updetails">
+                                        <span class="cardtime">9 PM</span>
+                                        <span class="temp">°C</span>
+                                    </div>
+                                    <div class="card_icon">
+                    
+                                    </div>
+                                    <div class="card_condition">
+                                        
+                                    </div>
+                                    <div class="card_first_line">
+                                        <div class="card_wind_details">
+                                            <i class="fa-solid fa-wind fa-xs"></i>
+                                            <span class="card_wind">Km/h</span>
+                                        </div>
+                                        <div class="card_humidity_details">
+                                            <i class="fa-solid fa-droplet fa-xs"></i>
+                                            <span class="card_humidity"> %</span>
+                                        </div>                       
+                                    </div>
+                                    <div class="card_feelsLike">
+                                        feels_like : <span>°C</span>
+                                    </div>
+                                    <div class="card_rain_snow">
+                                        <div class="card_rain_details">
+                                            <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                                            <span class="card_rain">%</span>
+                                        </div>
+                                        <div class="card_snow_details">
+                                            <i class="fa-regular fa-snowflake fa-xs"></i>
+                                            <span class="card_snow">%</span>
+                                        </div>
+                                    </div>
+                                        <div class="card_wind_details">
+                                        AQI - 
+                                        <span class="card_wind2">--</span>
+                                        </div>
+                                </div>
+
+                                <div class="hourcards">
+                                    <div class="hourcard_updetails">
+                                        <span class="cardtime">11 PM</span>
+                                        <span class="temp">°C</span>
+                                    </div>
+                                    <div class="card_icon">
+                    
+                                    </div>
+                                    <div class="card_condition">
+                                        
+                                    </div>
+                                    <div class="card_first_line">
+                                        <div class="card_wind_details">
+                                            <i class="fa-solid fa-wind fa-xs"></i>
+                                            <span class="card_wind">Km/h</span>
+                                        </div>
+                                        <div class="card_humidity_details">
+                                            <i class="fa-solid fa-droplet fa-xs"></i>
+                                            <span class="card_humidity"> %</span>
+                                        </div>                       
+                                    </div>
+                                    <div class="card_feelsLike">
+                                        feels_like : <span>°C</span>
+                                    </div>
+                                    <div class="card_rain_snow">
+                                        <div class="card_rain_details">
+                                            <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                                            <span class="card_rain">%</span>
+                                        </div>
+                                        <div class="card_snow_details">
+                                            <i class="fa-regular fa-snowflake fa-xs"></i>
+                                            <span class="card_snow">%</span>
+                                        </div>
+                                    </div>
+                                        <div class="card_wind_details">
+                                        AQI - 
+                                        <span class="card_wind2">--</span>
+                                        </div>
+                                </div>
+
+
+                                <div class="hourcards">
+                                    <div class="hourcard_updetails">
+                                        <span class="cardtime">1 AM</span>
+                                        <span class="temp">°C</span>
+                                    </div>
+                                    <div class="card_icon">
+                    
+                                    </div>
+                                    <div class="card_condition">
+                                        
+                                    </div>
+                                    <div class="card_first_line">
+                                        <div class="card_wind_details">
+                                            <i class="fa-solid fa-wind fa-xs"></i>
+                                            <span class="card_wind">Km/h</span>
+                                        </div>
+                                        <div class="card_humidity_details">
+                                            <i class="fa-solid fa-droplet fa-xs"></i>
+                                            <span class="card_humidity"> %</span>
+                                        </div>                       
+                                    </div>
+                                    <div class="card_feelsLike">
+                                        feels_like : <span>°C</span>
+                                    </div>
+                                    <div class="card_rain_snow">
+                                        <div class="card_rain_details">
+                                            <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                                            <span class="card_rain">%</span>
+                                        </div>
+                                        <div class="card_snow_details">
+                                            <i class="fa-regular fa-snowflake fa-xs"></i>
+                                            <span class="card_snow">%</span>
+                                        </div>
+                                    </div>
+                                        <div class="card_wind_details">
+                                        AQI - 
+                                        <span class="card_wind2">--</span>
+                                        </div>
+                                </div>
+
+
+                                <div class="hourcards">
+                                    <div class="hourcard_updetails">
+                                        <span class="cardtime">3 AM</span>
+                                        <span class="temp">°C</span>
+                                    </div>
+                                    <div class="card_icon">
+                    
+                                    </div>
+                                    <div class="card_condition">
+                                        
+                                    </div>
+                                    <div class="card_first_line">
+                                        <div class="card_wind_details">
+                                            <i class="fa-solid fa-wind fa-xs"></i>
+                                            <span class="card_wind">Km/h</span>
+                                        </div>
+                                        <div class="card_humidity_details">
+                                            <i class="fa-solid fa-droplet fa-xs"></i>
+                                            <span class="card_humidity"> %</span>
+                                        </div>                       
+                                    </div>
+                                    <div class="card_feelsLike">
+                                        feels_like : <span>°C</span>
+                                    </div>
+                                    <div class="card_rain_snow">
+                                        <div class="card_rain_details">
+                                            <i class="fa-solid fa-cloud-showers-heavy fa-xs"></i>
+                                            <span class="card_rain">%</span>
+                                        </div>
+                                        <div class="card_snow_details">
+                                            <i class="fa-regular fa-snowflake fa-xs"></i>
+                                            <span class="card_snow">%</span>
+                                        </div>
+                                    </div>
+                                        <div class="card_wind_details">
+                                        AQI - 
+                                        <span class="card_wind2"> -- </span>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- todays_highlights============================================================ -->
+
+                    <div class="todays_highlights">
+                        <h2>Today's Highlights</h2>
+                        <div class="todays_details">
+
+                            
+                            <div class="todays_temp">
+                                <div class="todays_upper">
+                                    <div class="max">Temparature Max<span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                                    <div class="avg">Temparature Avg<span> °C</span><i class="fa-solid fa-arrows-left-right fa-xs"></i></div>
+                                    <div class="min">Temparature Min<span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                                </div>
+                                <div class="todays_lower">
+                            
+                                </div>
+                            </div>
+
+                            <div class="todays_wind">
+                                <div class="wind_lower_detials">
+                                    <div class="maxwind">Wind Max<span> km/h</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                                    <div class="avgwind">Visibility<span> </span><i class="fa-solid fa-arrows-left-right fa-xs"></i></div>
+                                    <div class="minwind">Humidity<span> </span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                                </div>
+                                <div class="todays_wind_lower">
+                                    <div class="todays_wind_feel-like">Real feel <span> °C</span></div>
+                                </div>
+                            </div>
+
+                            <div class="todays_astro">
+                                <div class="astro_day">
+                                    <div class="sunrise">sunrise
+                                        <span> AM</span>
+                                        <i class="fa-solid fa-arrow-up fa-xs"></i>
+                                    </div>
+                                    <div class="sunset">sunset
+                                        <span> PM</span>
+                                        <i class="fa-solid fa-arrow-down fa-xs"></i>
+                                    </div>
+                                </div>
+
+                                <div class="astro_night off">
+                                    <div class="moonrise">Moonrise<span>PM</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                                    <div class="moonset">Moonset<span> PM</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                                </div>
+                            </div>
+
+                            <div class="todays_airquality">
+                                <div class="aqi_details">
+                                    <div>co<span class="co">0</span></div>
+                                    <div>no2<span class="no2">0</span></div>
+                                    <div>o3<span class="o3">0</span></div>
+                                    <div>so2<span class="so2">0</span></div>
+                                    <div>pom2_5<span class="pom2_5">0</span></div>
+                                    <div>pm10<span class="pm10">0</span></div>
+                                </div>
+
+                                <div class="finalreview">
+                
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>                        
+                </div>
+                
+                <div class="forweek toeek">
+                    <div class="allday">
+                        <div class="daycards activeday">
+                            <div class="dcarddate" ></div>
+                            <div class="dcardsicon"></div>
+                            <div class="dcardstemp">°C</div>
+                            <div class="dcardmain">--</div>
+
+                        </div>
+
+                        <div class="daycards">
+                            <div class="dcarddate"></div>
+                            <div class="dcardsicon"></div>
+                            <div class="dcardstemp">°C</div>
+                            <div class="dcardmain">--</div>
+
+                        </div>
+
+                        <div class="daycards">
+                            <div class="dcarddate"></div>
+                            <div class="dcardsicon"></div>
+                            <div class="dcardstemp">°C</div>
+                            <div class="dcardmain">--</div>
+
+                        </div>
+
+                        <div class="daycards">
+                            <div class="dcarddate"></div>
+                            <div class="dcardsicon"></div>
+                            <div class="dcardstemp">°C</div>
+                            <div class="dcardmain">--</div>
+
+                        </div>
+
+                        <div class="daycards">
+                            <div class="dcarddate"></div>
+                            <div class="dcardsicon"></div>
+                            <div class="dcardstemp">°C</div>
+                            <div class="dcardmain">--</div>
+
+                        </div>
+
+                    </div>
+                    <div class="eacheading">
+                        4 Hour
+                    </div>
+                    <div class="eachday ">
+                        
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+                    </div>
+                    <div class="eachday activeach">
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+                    </div>
+                    <div class="eachday activeach">
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+                    </div>
+                    <div class="eachday activeach">
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+                    </div>
+                    <div class="eachday activeach">
+                        
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+
+                        <div class="eachour">
+                            <div class="eachfirst">
+                                <div class="etemp">°C</div>
+                                <div class="etime">AM</div>
+                            </div>
+                            <div class="eicon">
+
+                            </div>
+                            <div class="eminmax">
+                                <div class="emax"><span> °C</span><i class="fa-solid fa-arrow-up fa-xs"></i></div>
+                
+                                <div class="emin"><span> °C</span><i class="fa-solid fa-arrow-down fa-xs"></i></div>
+                            </div>
+
+                            <div class="erealfeel">Real Feel -<span>°C</span></div>
+                            <div class="edescription"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
